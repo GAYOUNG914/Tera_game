@@ -13,6 +13,11 @@ body {
 body {
   background: #fff;
   font-family: "Noto Sans KR", sans-serif;
+  min-width: 1440px;
+}
+
+img {
+  vertical-align: top;
 }
 
 html,
@@ -42,6 +47,7 @@ a:active {
 
 button {
   outline: none;
+  border: 0;
   cursor: pointer;
   background-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -94,6 +100,22 @@ button {
   transition: 0.2s opacity ease;
   opacity: 0;
 }
+
+.button:hover::after {
+  opacity: 1;
+}
+
+.cursor {
+  position: absolute;
+  background: url(../img/main/cursor.png) no-repeat center center;
+  background-size: contain;
+  left: 100;
+  top: 100;
+  width: 30px;
+  height: 118px;
+  z-index: 1000;
+}
+
 /*common style finish*/
 
 .active {
@@ -114,7 +136,8 @@ button {
 
 #main {
   position: relative;
-  padding: 248px 0 0;
+  padding: 110px 0 0;
+  cursor: none;
 }
 
 .vis_video {
@@ -197,6 +220,11 @@ button {
   margin-top: -73px;
 }
 
+.vis_content .btn_apply_wrap.on {
+  background-image: url(../img/main/sp_button.png);
+  background-position: -434px -1px;
+}
+
 .vis_content .btn_apply_wrap .btn_apply {
   position: absolute;
   top: 100px;
@@ -262,6 +290,7 @@ button {
 /*updates section start*/
 #updates {
   background: url(../img/new/bg_cont1.jpg);
+  padding: 200px 0;
 }
 
 #updates .content1_title {
@@ -285,21 +314,21 @@ button {
   width: calc(100% / 3);
 }
 
-.content1_list li:nth-of-type(1),
-.content2_list li:nth-of-type(1),
-.content3_list li:nth-of-type(1) {
+.content1_list.on li:nth-of-type(1),
+.content2_list.on li:nth-of-type(1),
+.content3_list.on li:nth-of-type(1) {
   transition-delay: 0.15s !important;
 }
 
-.content1_list li:nth-of-type(2),
-.content2_list li:nth-of-type(2),
-.content3_list li:nth-of-type(2) {
+.content1_list.on li:nth-of-type(2),
+.content2_list.on li:nth-of-type(2),
+.content3_list.on li:nth-of-type(2) {
   transition-delay: 0.25s !important;
 }
 
-.content1_list li:nth-of-type(3),
-.content2_list li:nth-of-type(3),
-.content3_list li:nth-of-type(3) {
+.content1_list.on li:nth-of-type(3),
+.content2_list.on li:nth-of-type(3),
+.content3_list.on li:nth-of-type(3) {
   transition-delay: 0.35s !important;
 }
 
@@ -436,6 +465,7 @@ button {
   color: #251b19;
   font-size: 1rem;
   outline: transparent;
+  border: 0;
 }
 
 #veryfication {
@@ -567,4 +597,157 @@ button {
   height: 2px;
   background-color: #9f948a;
   border-radius: 50%;
+}
+
+#kakao_event {
+  background-image: url(../img/kakao_event/bg_cont3.jpg);
+  padding-bottom: 30px;
+}
+
+.content3_title {
+  background: url(../img/kakao_event/cont3_title.png);
+  width: 1048px;
+  height: 258px;
+}
+
+.content3_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.content3_list li {
+  display: inline-block;
+  width: 165px;
+  height: 169px;
+  margin-right: 53px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+.content3_list li:nth-of-type(1) {
+  background-image: url(../img/kakao_event/cont3_obj1.png);
+}
+.content3_list li:nth-of-type(2) {
+  background-image: url(../img/kakao_event/cont3_obj2.png);
+}
+.content3_list li:nth-of-type(3) {
+  background-image: url(../img/kakao_event/cont3_obj3.png);
+}
+
+.content3_channel {
+  position: relative;
+  margin: 30px 0 30px 0;
+  height: 296px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.content3_channel:before,
+.content3_channel:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 71px;
+  height: inherit;
+}
+
+.content3_channel:before {
+  background: url(../img/kakao_event/bg_gradient.png) repeat-y 0 0;
+}
+
+.content3_channel:after {
+  background: url(../img/kakao_event/bg_gradient.png) repeat-y 0 0;
+  transform: rotate(180deg);
+  right: 0;
+  left: auto;
+}
+
+.content3_channel_title {
+  position: relative;
+  top: -13px;
+  z-index: 1;
+}
+
+.content3_channel .inner {
+  width: calc(100% - 142px);
+  height: inherit;
+  margin: -30px auto 0 auto;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.content3_channel_step {
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 40px 0 40px;
+  margin: 0 5px;
+}
+
+.content3_channel_step:after {
+  content: "";
+  position: absolute;
+  top: 36%;
+  left: 54%;
+  width: 25px;
+  height: 43px;
+  background: url(../img/kakao_event/icon_channel_arrow.png) no-repeat 0 0;
+}
+
+.content3_channel_step .step1 {
+  position: relative;
+}
+
+.content3_channel_step .step1 .btn_kakao {
+  position: absolute;
+  left: 165px;
+  bottom: -14px;
+  width: 309px;
+  height: 102px;
+  background-position: -372px -312px;
+}
+
+.content3_channel_step .step1 .btn_kakao:after {
+  background-position: -683px -312px;
+}
+
+.content3_channel_notice {
+  position: relative;
+  font-size: 0.8rem;
+  color: #969696;
+  font-weight: 400;
+  text-shadow: 0px 1px 2px rgb(0 0 0);
+  line-height: 1.2rem;
+  padding: 22px 0;
+}
+
+.content3_coupon {
+  width: 331px;
+  height: 24px;
+  background-image: url(../img/kakao_event/cont3_coupon.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 0;
+  text-indent: -9999px;
+  background-size: contain;
+  transition: 0.2s ease;
+}
+
+.btn_coupon {
+  width: 265px;
+  height: 64px;
+  background-position: -867px -1px;
+  margin-bottom: 25px;
+}
+
+.btn_coupon:after {
+  background-position: -867px -67px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #7e746b;
 }

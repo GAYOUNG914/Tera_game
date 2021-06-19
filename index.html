@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tera</title>
-    <link rel="stylesheet" href="./asset/css/swiper-bundle.css" />
-    <link rel="stylesheet" href="./asset/css/swiper_customize.css" />
     <link rel="stylesheet" href="./asset/css/style.css" />
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
@@ -44,6 +42,7 @@
           </ul>
         </nav> -->
         <section id="main">
+          <div class="cursor"></div>
           <div class="vis_video">
             <video
               width="100%"
@@ -63,13 +62,13 @@
             <div class="btn_apply_wrap">
               <button class="btn_apply">발데론 원정대 신청하기</button>
             </div>
-            <a href="#" class="btn_scroll_down fade_up_title"></a>
+            <a href="#updates" class="btn_scroll_down fade_up_title"></a>
           </div>
         </section>
         <!--main-->
         <section id="updates" class="section">
-          <strong class="content1_title con_title active on">변화의 서막</strong>
-          <ul class="content1_list">
+          <strong class="content1_title con_title active">변화의 서막</strong>
+          <ul class="content1_list active">
             <li class="active on"><a href="#" class="button"></a></li>
             <li class="soon active on"><a href="#" class="button btn_soon"></a></li>
             <li class="soon active on"><a href="#" class="button btn_soon"></a></li>
@@ -77,8 +76,8 @@
         </section>
         <!-- updates -->
         <section id="pre_register" class="section">
-          <strong class="content2_title con_title">발데론 원정대 모집 event</strong>
-          <ul class="content2_list">
+          <strong class="content2_title con_title active">발데론 원정대 모집 event</strong>
+          <ul class="content2_list active on">
             <li class="active on">
               <span class="content2_list_item">발데론 원정대 선발 보상</span>
               <a href="#" class="button btn_gift">선물자세히보기</a>
@@ -144,17 +143,19 @@
         </section>
         <!-- pre_register -->
         <section id="kakao_event" class="section">
-          <strong class="content3_title">TERA 카카오톡 채널추가 event / TERA 카카오톡 채널을 추가하고 최신 이벤트와 업데이트 소식을 만나보세요. 채널 추가 선물도 놓치지 마세요!</strong>
-          <ul class="content3_list">
-            <li class="fade-up">영구제</li>
-            <li class="fade-up">기간제</li>
-            <li class="fade-up">세계의 결정</li>
+          <strong class="content3_title active con_title"
+            >TERA 카카오톡 채널추가 event / TERA 카카오톡 채널을 추가하고 최신 이벤트와 업데이트 소식을 만나보세요. 채널 추가 선물도 놓치지 마세요!</strong
+          >
+          <ul class="content3_list active on">
+            <li class="active on">영구제</li>
+            <li class="active on">기간제</li>
+            <li class="active on">세계의 결정</li>
           </ul>
-          <div class="content3_channel">
+          <div class="content3_channel active on">
             <span class="content3_channel_title"><img src="./asset/img/kakao_event/cont3_channel_title.png" alt="" /></span>
             <div class="inner">
               <div class="content3_channel_step">
-                <div class="step1"><img src="./asset/img/kakao_event/cont3_channel_step1.png" alt="" /><a href="#" class="btn_kakao"></a></div>
+                <div class="step1"><img src="./asset/img/kakao_event/cont3_channel_step1.png" alt="" /><a href="#" class="btn_kakao button"></a></div>
                 <div class="step2"><img src="./asset/img/kakao_event/cont3_channel_step2.png" alt="" /></div>
               </div>
               <p class="content3_channel_notice">
@@ -174,7 +175,5 @@
         <!-- kakao_event -->
       </div>
     </main>
-    <script type="text/javascript" src="./js/swiper-bundle.js"></script>
-    <script></script>
   </body>
 </html>
