@@ -373,6 +373,45 @@ button {
 }
 /*updates section finish*/
 
+.illust {
+  position: absolute;
+  left: -300px;
+  top: 1500px;
+  z-index: 50;
+  width: 900px;
+  animation-duration: 0.8s;
+  animation-name: illust;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes illust {
+  from {
+    transform: translateY(-3%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.illust2 {
+  left: auto;
+  right: -325px;
+  top: 2800px;
+  z-index: 50;
+  width: 900px;
+  animation-name: illust;
+}
+
+@keyframes illust {
+  from {
+    transform: translateY(-3%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 /*pre_register section start*/
 #pre_register {
   position: relative;
@@ -599,6 +638,7 @@ button {
   border-radius: 50%;
 }
 
+/*kakao event section start*/
 #kakao_event {
   background-image: url(../img/kakao_event/bg_cont3.jpg);
   padding-bottom: 30px;
