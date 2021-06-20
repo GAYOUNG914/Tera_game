@@ -71,4 +71,9 @@ $(function () {
     $("html,body").stop();
     $("html,body").animate({ scrollTop: offsetElem.top }, 1500);
   });
+
+  //a태그 비활성화
+  $('a[href="#"]').click(function (e) {
+    e.preventDefault();
+  });
 });
