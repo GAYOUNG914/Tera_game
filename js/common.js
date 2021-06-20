@@ -61,13 +61,14 @@ $(function () {
   $(".btn_apply_wrap").mouseleave(function () {
     $(this).removeClass("on");
   });
-});
 
-$(".btn_scroll_down").click(function () {
-  console.log($(this.hash));
-  let thisElem = $(this.hash);
-  let offsetElem = thisElem.offset();
-  console.log(offsetElem.top);
-  $("html,body").stop();
-  $("html,body").animate({ scrollTop: offsetElem.top }, 1500);
+  //버튼 하단이동
+  $(".btn_scroll_down").click(function () {
+    console.log($(this.hash));
+    let thisElem = $(this.hash);
+    let offsetElem = thisElem.offset();
+    console.log(offsetElem.top);
+    $("html,body").stop();
+    $("html,body").animate({ scrollTop: offsetElem.top }, 1500);
+  });
 });

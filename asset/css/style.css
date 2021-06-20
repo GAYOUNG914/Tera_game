@@ -397,7 +397,7 @@ button {
 .illust2 {
   left: auto;
   right: -325px;
-  top: 2800px;
+  top: 3000px;
   z-index: 50;
   width: 900px;
   animation-name: illust;
@@ -610,6 +610,10 @@ button {
   left: 0;
   transition: opacity 0.2s;
   opacity: 0;
+}
+
+.content2_form .btn_apply .upper_image:hover {
+  opacity: 1;
 }
 
 .content2_notice {
