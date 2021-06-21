@@ -8,12 +8,12 @@
 html,
 body {
   height: 100%;
+  min-width: 2000px;
 }
 
 body {
   background: #fff;
   font-family: "Noto Sans KR", sans-serif;
-  min-width: 1440px;
 }
 
 img {
@@ -375,10 +375,10 @@ button {
 
 .illust {
   position: absolute;
-  left: -300px;
+  left: -200px;
   top: 1500px;
   z-index: 50;
-  width: 900px;
+  width: 800px;
   animation-duration: 0.8s;
   animation-name: illust;
   animation-iteration-count: infinite;
@@ -396,10 +396,10 @@ button {
 
 .illust2 {
   left: auto;
-  right: -325px;
-  top: 3000px;
+  right: 8%;
+  top: 23%;
   z-index: 50;
-  width: 900px;
+  width: 450px;
   animation-name: illust;
 }
 
@@ -646,6 +646,7 @@ button {
 #kakao_event {
   background-image: url(../img/kakao_event/bg_cont3.jpg);
   padding-bottom: 30px;
+  position: relative;
 }
 
 .content3_title {
